@@ -1,0 +1,26 @@
+# Build-Artefakte
+*.pdf
+# Ausnahme: das fertige Cheatsheet wird als Workshop-Handreichung versioniert
+!cheatSheet/cheatsheet.pdf
+*.pptx
+*.docx
+*.zip
+texput.log
+*.log
+*.aux
+*.out
+*.toc
+*.synctex.gz
+
+# Vektor-/Bildquellen, die nicht versioniert werden müssen
+*.ai
+*.eps
+
+# Editor / OS
+.DS_Store
+*.swp
+*~
+.~lock.*
+
+# Exporte (SCORM/xAPI etc.)
+exports/

@@ -1,0 +1,606 @@
+% =====================================================================
+%  LiaScript / Markdown CheatSheet — A4, doppelseitig
+%  Workshop "OPAL Schule meets LiaScript", 28.05.2026
+%  Begleitmaterial zu Phase 3 (Anwenden) — die Kartentitel entsprechen
+%  exakt den "Cheatsheet-Abschnitt:"-Labels in 03_Anwenden_Vorlage.md.
+%  Compile:  pdflatex cheatsheet.tex   (zweimal für korrekte Boxen)
+% =====================================================================
+\documentclass[a4paper,landscape,9pt]{extarticle}
+
+% --- Layout ----------------------------------------------------------
+\usepackage[landscape,margin=0.9cm,top=1.0cm,bottom=0.7cm]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{8pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% --- Sprache & Schrift ----------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{libertine}
+\usepackage[varqu,varl,scaled=0.92]{inconsolata}
+
+% --- Farben ----------------------------------------------------------
+\usepackage{xcolor}
+\definecolor{mdblue}{HTML}{1F4E79}
+\definecolor{mdblueLt}{HTML}{E8EEF5}
+\definecolor{liagreen}{HTML}{2E6B3D}
+\definecolor{liagreenLt}{HTML}{E8F0E9}
+\definecolor{codebg}{HTML}{F6F6F4}
+\definecolor{rulegray}{HTML}{D0D0D0}
+\definecolor{muted}{HTML}{606060}
+
+% --- Pakete ----------------------------------------------------------
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+\usepackage{qrcode}
+\usepackage{fontawesome5}
+\usepackage{array}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+% --- Listings: Markdown/LiaScript-Quellcode --------------------------
+\lstdefinelanguage{lia}{
+  morecomment=[l]{\#},
+  morecomment=[s]{<!--}{-->},
+  sensitive=true
+}
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  breaklines=true,
+  breakatwhitespace=true,
+  showstringspaces=false,
+  keepspaces=true,
+  columns=fullflexible,
+  upquote=true,
+  literate=%
+    {ä}{{\"a}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+    {Ä}{{\"A}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+    {ß}{{\ss}}1 {„}{{\glqq}}1 {“}{{\grqq}}1,
+  frame=none,
+  xleftmargin=0pt,
+  aboveskip=0pt,
+  belowskip=0pt
+}
+
+% --- Karten-Vorlage --------------------------------------------------
+%  Zwei Varianten: mdcard (blau, Markdown) und liacard (grün, LiaScript)
+%  Innen: links Quellcode, rechts Wirkung — getrennt durch \tcblower.
+\tcbset{
+  cheatbase/.style={
+    enhanced,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.46\linewidth,
+    segmentation style={solid, rulegray, line width=0.3pt},
+    colback=white,
+    boxrule=0.3pt,
+    arc=2pt,
+    left=4pt,right=4pt,top=2pt,bottom=2pt,middle=4pt,
+    before skip=3pt, after skip=3pt,
+    breakable=false,
+    fonttitle=\sffamily\bfseries\footnotesize,
+    coltitle=white
+  }
+}
+
+\newtcolorbox{mdcard}[1]{cheatbase, colframe=mdblue!75,  colbacktitle=mdblue,   title=#1}
+\newtcolorbox{liacard}[1]{cheatbase, colframe=liagreen!75, colbacktitle=liagreen, title=#1}
+
+% Karte für die ganze Spaltenbreite (z. B. Mini-Kurs am Ende)
+\newtcolorbox{liawide}[1]{
+  enhanced,
+  colback=white,
+  colframe=liagreen!75,
+  boxrule=0.3pt, arc=2pt,
+  left=4pt,right=4pt,top=2pt,bottom=2pt,
+  before skip=3pt, after skip=0pt,
+  breakable=false,
+  fonttitle=\sffamily\bfseries\footnotesize,
+  coltitle=white, colbacktitle=liagreen, title=#1
+}
+
+% Info-Box ohne sidebyside (für Tools/Templates-Spalten unten)
+\tcbset{
+  infobase/.style={
+    enhanced, colback=white,
+    boxrule=0.3pt, arc=2pt,
+    left=5pt,right=5pt,top=3pt,bottom=3pt,
+    before skip=3pt, after skip=0pt,
+    breakable=false,
+    fonttitle=\sffamily\bfseries\footnotesize, coltitle=white
+  }
+}
+\newtcolorbox{mdinfo}[1]{infobase, colframe=mdblue!75,    colbacktitle=mdblue,   title=#1}
+\newtcolorbox{liainfo}[1]{infobase, colframe=liagreen!75, colbacktitle=liagreen, title=#1}
+
+% Kleine Hilfsmacros für die "Wirkung"-Spalte
+\newcommand{\prevtxt}[1]{{\small #1}}
+\newcommand{\prevsm}[1]{{\footnotesize\color{muted} #1}}
+
+\pagestyle{empty}
+\begin{document}
+
+% =====================================================================
+% SEITE 1 — MARKDOWN
+% =====================================================================
+\noindent\begin{tcolorbox}[
+  enhanced, frame hidden, sharp corners,
+  colback=mdblue, coltext=white,
+  left=12pt, right=8pt, top=4pt, bottom=4pt,
+  before skip=0pt, after skip=4pt,
+  width=\linewidth,
+  borderline west={4pt}{-4pt}{mdblue!55}
+]
+\begin{minipage}[c]{0.66\linewidth}
+  {\sffamily\fontsize{26}{28}\selectfont\bfseries Markdown}\hspace{0.4em}%
+  {\sffamily\large\color{white!75} — die Basis}\\[2pt]
+  {\sffamily\footnotesize\itshape\color{white!90} Was jeder Markdown-Editor versteht — Grundlage für alle LiaScript-Dokumente.}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.20\linewidth}\raggedright
+  {\sffamily\scriptsize\color{white!85}\faGraduationCap~~Phase 3 · Anwenden}\\[2pt]
+  {\sffamily\bfseries\normalsize Seite 1\,/\,2}\\[1pt]
+  {\sffamily\scriptsize\color{white!75} Markdown-Grundlagen}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.10\linewidth}\centering
+  {\color{black}\colorbox{white}{\hspace{1pt}\qrcode[height=1.55cm,nolinks]{https://liascript.github.io/LiveEditor/}\hspace{1pt}}}\\[1pt]
+  {\sffamily\scriptsize\color{white!90}\faEdit~Live-Editor}
+\end{minipage}
+\end{tcolorbox}
+
+% --- Tag für Aufgabenbezug (klein, oben rechts in der Titelzeile) ---
+\newcommand{\aufg}[1]{\hfill{\sffamily\scriptsize\color{white!85}\faTasks~A#1}}
+
+\begin{multicols}{3}
+
+% =====================================================================
+% Block A — Textauszeichnung & Struktur (Aufgaben 2-4)
+% =====================================================================
+
+% --- A2a. Textauszeichnung ------------------------------------------
+\begin{mdcard}{Textauszeichnung\aufg{2}}
+\begin{lstlisting}[language=lia]
+**Energie**, *kursiv*,
+~~durchgestrichen~~,
+`Joule`
+\end{lstlisting}
+\tcblower
+\prevtxt{\textbf{Energie}, \textit{kursiv},
+\sout{durchgestrichen}, \texttt{Joule}}
+\end{mdcard}
+
+% --- A2b. Absätze & Trennlinie --------------------------------------
+\begin{mdcard}{Absätze \& Trennlinie\aufg{2}}
+\begin{lstlisting}[language=lia]
+Erster Absatz.
+
+Zweiter Absatz nach
+einer Leerzeile.
+
+---
+\end{lstlisting}
+\tcblower
+\prevtxt{Erster Absatz.\\[3pt]
+Zweiter Absatz nach einer Leerzeile.\\[2pt]
+\textcolor{rulegray}{\hrulefill}}
+\end{mdcard}
+
+% --- A3. Überschriften ----------------------------------------------
+\begin{mdcard}{Überschriften\aufg{3}}
+\begin{lstlisting}[language=lia]
+# Energie
+## Worum geht es?
+### Energiearten
+#### Detail
+\end{lstlisting}
+\tcblower
+{\large\bfseries Energie}\par\vspace{1pt}
+{\normalsize\bfseries Worum geht es?}\par\vspace{1pt}
+{\small\bfseries Energiearten}\par\vspace{1pt}
+{\footnotesize\bfseries Detail}\par\vspace{2pt}
+{\scriptsize\color{muted}Bildet die Navigation am rechten Rand.}
+\end{mdcard}
+
+% --- A4. Listen -----------------------------------------------------
+\begin{mdcard}{Listen\aufg{4}}
+\begin{lstlisting}[language=lia]
+- Energie definieren
+- E_kin und E_pot
+  unterscheiden
+
+  - Sonderfall Feder
+
+- Joule benennen
+
+1. erstens
+2. zweitens
+\end{lstlisting}
+\tcblower
+\prevtxt{%
+$\bullet$ Energie definieren\\
+$\bullet$ E\textsubscript{kin} und E\textsubscript{pot} unterscheiden\\[2pt]
+\hspace*{1em}$\circ$ Sonderfall Feder\\[2pt]
+$\bullet$ Joule benennen\\[3pt]
+1. erstens\\
+2. zweitens\\[2pt]
+{\scriptsize\color{muted}Untergeordnete Listen um \textbf{2 Zeichen} einrücken.}}
+\end{mdcard}
+
+% =====================================================================
+% Block B — Tabellen, Formeln & Bilder (Aufgaben 5-8)
+% =====================================================================
+
+% --- A5. Tabellen ---------------------------------------------------
+\begin{mdcard}{Tabellen\aufg{5}}
+\begin{lstlisting}[language=lia]
+| Energieart | Formel       |
+|:-----------|:------------:|
+| kinetisch  | 1/2 m v^2    |
+| potentiell | m g h        |
+| Spann      | 1/2 D s^2    |
+\end{lstlisting}
+\tcblower
+\prevtxt{%
+\renewcommand{\arraystretch}{1.05}%
+\begin{tabular}{|l|c|}\hline
+\textbf{Energieart} & \textbf{Formel}\\\hline
+kinetisch  & $\tfrac{1}{2}mv^2$\\
+potentiell & $mgh$\\
+Spann      & $\tfrac{1}{2}Ds^2$\\\hline
+\end{tabular}\\[2pt]
+{\scriptsize\color{muted}\texttt{:--} links, \texttt{:--:} zentriert, \texttt{--:} rechts}}
+\end{mdcard}
+
+% --- A6. Mathematische Formeln (LaTeX) ------------------------------
+\begin{mdcard}{Mathematische Formeln (LaTeX)\aufg{6}}
+\begin{lstlisting}[language=lia]
+Inline: $E = m c^2$
+
+Block:
+$$E_\text{kin}
+  = \tfrac{1}{2}\, m\, v^2$$
+\end{lstlisting}
+\tcblower
+\prevtxt{Inline: $E = m c^2$\\[3pt]
+Block:\\
+$\displaystyle E_\text{kin} = \tfrac{1}{2}\, m\, v^2$\\[3pt]
+{\scriptsize\color{muted}Index \texttt{\_}, Bruch \texttt{\textbackslash tfrac}, Quadrat \texttt{\^{}2}.
+Ersetzt zerfallene Unicode-Schnipsel.}}
+\end{mdcard}
+
+% --- A8. Bilder -----------------------------------------------------
+\begin{mdcard}{Bilder\aufg{8}}
+\begin{lstlisting}[language=lia]
+![Alt-Text](pfad/bild.png)
+
+![Schwingendes Pendel](
+  https://.../Pendulum.svg)
+\end{lstlisting}
+\tcblower
+\prevtxt{\fbox{\rule{0pt}{1.2em}\hspace{1.2em}{\scriptsize\color{muted}Bild}\hspace{1.2em}}\\[2pt]
+{\scriptsize\color{muted}\textit{Alt-Text in eckigen Klammern — wichtig für Barrierefreiheit. Quelle/Lizenz in der Bildunterschrift nennen.}}}
+\end{mdcard}
+
+% =====================================================================
+% Block C — Hinweise & Referenz-Karten (Aufgabe 7)
+% =====================================================================
+
+% --- A7. Hinweise / Callouts ----------------------------------------
+\begin{mdcard}{Hinweise / Callouts\aufg{7}}
+\begin{lstlisting}[language=lia]
+> Ein einfaches Zitat.
+
+> [!TIP]      gelb
+> [!NOTE]     blau
+> [!WARNING]  rot
+\end{lstlisting}
+\tcblower
+\prevtxt{%
+\textcolor{rulegray}{\rule{1pt}{1.1em}}\hspace{4pt}\textit{Ein einfaches Zitat.}\\[3pt]
+\textcolor{mdblue}{\rule{1pt}{1.0em}}\hspace{3pt}{\scriptsize\textbf{TIP} (gelb): Definitionen, Hinweise}\\[1pt]
+\hspace*{8pt}{\scriptsize\textbf{NOTE} (blau): Lese-Empfehlungen}\\[1pt]
+\hspace*{8pt}{\scriptsize\textbf{WARNING} (rot): Stolperfallen}\\[2pt]
+\hspace*{8pt}{\scriptsize Folgezeilen mit \texttt{>} = Inhalt der Box.}}
+\end{mdcard}
+
+% --- R1. Aufgabenliste / Checkboxen ---------------------------------
+\begin{mdcard}{Checklisten (Referenz)}
+\begin{lstlisting}[language=lia]
+- [x] erledigt
+- [ ] offen
+- [ ] noch offen
+\end{lstlisting}
+\tcblower
+\prevtxt{%
+\faCheckSquare~erledigt\\
+\faSquare~offen\\
+\faSquare~noch offen\\[2pt]
+{\scriptsize\color{muted}Ideal für eine Lernfortschritts-Bilanz.}}
+\end{mdcard}
+
+% --- R2. HTML & Sonderzeichen ---------------------------------------
+\begin{mdcard}{HTML \& Sonderzeichen (Referenz)}
+\begin{lstlisting}[language=lia]
+<u>unterstrichen</u>
+<br>  Zeilenumbruch
+\* kein Listenpunkt
+\end{lstlisting}
+\tcblower
+\prevtxt{\underline{unterstrichen}\\
+{\scriptsize\color{muted}(Zeilenumbruch)}\\
+*~kein Listenpunkt\\[2pt]
+{\scriptsize\color{muted}Backslash escapt Markdown-Sonderzeichen.}}
+\end{mdcard}
+
+\end{multicols}
+
+% --- Untere Zeile: Werkzeuge & Editoren (volle Breite) -------------
+\noindent
+\begin{mdinfo}{\faToolbox~~Werkzeuge \& Editoren für Markdown}
+\footnotesize
+\begin{minipage}[t]{0.24\linewidth}
+\textbf{\color{mdblue}Lokale Editoren}\\[1pt]
+$\bullet$~VS Code \textit{(+ Markdown All in One)}\\
+$\bullet$~Obsidian, Typora, Marktext
+\end{minipage}\hfill
+\begin{minipage}[t]{0.22\linewidth}
+\textbf{\color{mdblue}Online \& kollaborativ}\\[1pt]
+$\bullet$~LiaScript LiveEditor\\
+$\bullet$~hackmd.io \textit{(kollaborativ)}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.24\linewidth}
+\textbf{\color{mdblue}Konvertieren \& Qualität}\\[1pt]
+$\bullet$~\texttt{pandoc} → HTML, PDF, DOCX, EPUB\\
+$\bullet$~\texttt{markdownlint}, \texttt{prettier}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.25\linewidth}
+\textbf{\color{mdblue}Versionierung}\\[1pt]
+$\bullet$~Git \& GitHub/GitLab rendern Markdown direkt\\
+$\bullet$~Tabellen: \texttt{tablesgenerator.com/markdown}
+\end{minipage}
+\end{mdinfo}
+
+\vfill
+{\sffamily\scriptsize\color{muted}
+\faInfoCircle~Live ausprobieren: \textbf{liascript.github.io/LiveEditor}\hfill
+\faGithub~Quellcode: \textbf{github.com/LiaPlayground/Opal\_Schule\_meets\_LiaScript}}
+
+\newpage
+
+% =====================================================================
+% SEITE 2 — LIASCRIPT
+% =====================================================================
+\noindent\begin{tcolorbox}[
+  enhanced, frame hidden, sharp corners,
+  colback=liagreen, coltext=white,
+  left=12pt, right=8pt, top=4pt, bottom=4pt,
+  before skip=0pt, after skip=4pt,
+  width=\linewidth,
+  borderline west={4pt}{-4pt}{liagreen!55}
+]
+\begin{minipage}[c]{0.66\linewidth}
+  {\sffamily\fontsize{26}{28}\selectfont\bfseries LiaScript}\hspace{0.4em}%
+  {\sffamily\large\color{white!75} — die Erweiterungen}\\[2pt]
+  {\sffamily\footnotesize\itshape\color{white!90} Alles, was Markdown allein nicht kann: Quiz, Animationen, Simulationen, ausführbarer Code, Sprache.}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.20\linewidth}\raggedright
+  {\sffamily\scriptsize\color{white!85}\faGraduationCap~~Phase 3 · Anwenden}\\[2pt]
+  {\sffamily\bfseries\normalsize Seite 2\,/\,2}\\[1pt]
+  {\sffamily\scriptsize\color{white!75} Erweiterungen \& Interaktion}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.10\linewidth}\centering
+  {\color{black}\colorbox{white}{\hspace{1pt}\qrcode[height=1.55cm,nolinks]{https://github.com/LiaPlayground/Opal_Schule_meets_LiaScript}\hspace{1pt}}}\\[1pt]
+  {\sffamily\scriptsize\color{white!90}\faGithub~Workshop-Repo}
+\end{minipage}
+\end{tcolorbox}
+
+% --- Tag für Aufgabenbezug (grün, oben rechts im Karten-Titel) -----
+\newcommand{\aufglia}[1]{\hfill{\sffamily\scriptsize\color{white!85}\faTasks~A#1}}
+
+\begin{multicols}{3}
+
+% =====================================================================
+% Block A — Kursrahmen (Aufgabe 1)
+% =====================================================================
+
+% --- A1. YAML-Header -------------------------------------------------
+\begin{liacard}{YAML-Header\aufglia{1}}
+\begin{lstlisting}[language=lia]
+<!--
+author:   Ihr Name
+language: de
+narrator: Deutsch Male
+import:   https://github.com/
+          LiaTemplates/Pyodide
+-->
+\end{lstlisting}
+\tcblower
+\prevsm{Steht ganz oben im Dokument.\\
+Definiert Autor:in, Sprache, Stimme
+und externe Bausteine (\textit{Imports}).\\[2pt]
+{\footnotesize Der \texttt{Pyodide}-Import wird für den
+Code-Block in Aufgabe 15 gebraucht.}}
+\end{liacard}
+
+% =====================================================================
+% Block B — Medien & Einbettung (Aufgaben 9-10)
+% =====================================================================
+
+% --- A9. Video ------------------------------------------------------
+\begin{liacard}{Video\aufglia{9}}
+\begin{lstlisting}[language=lia]
+!?[Titel](https://www.youtube
+.com/watch?v=VIDEO_ID)
+
+!?[Audio](datei.mp3)
+\end{lstlisting}
+\tcblower
+\prevsm{\faYoutube~YouTube, Vimeo, MP4
+und MP3 werden direkt eingebettet.\\[2pt]
+\textbf{!?} statt \textbf{!} = abspielbar.\\[2pt]
+{\footnotesize Auf die Lizenz des Videos achten.}}
+\end{liacard}
+
+% --- A10. iframe-Einbettung (PhET-Simulation) -----------------------
+\begin{liacard}{iframe-Einbettung\aufglia{10}}
+\begin{lstlisting}[language=lia]
+??[PhET-Simulation](
+  https://phet.colorado.edu/
+  .../energy-skate-park_de.html)
+\end{lstlisting}
+\tcblower
+\prevsm{\faWindowMaximize~\textbf{??} erkennt das Format
+automatisch (PhET, PDF, GeoGebra, \dots)
+und bettet es ein -- kein Tab-Wechsel.\\[2pt]
+{\footnotesize Höhe vorab steuern:\\
+\texttt{<!-{}- style="height: 700px;" -{}->}\\
+direkt über die \texttt{??}-Zeile setzen.}}
+\end{liacard}
+
+% =====================================================================
+% Block C — Quizze (Aufgaben 11-13)
+% =====================================================================
+
+% --- A11. Einfachauswahl --------------------------------------------
+\begin{liacard}{Quizformate / Einfachauswahl\aufglia{11}}
+\begin{lstlisting}[language=lia]
+Welche Einheit hat Energie?
+
+- [( )] Newton
+- [(X)] Joule
+- [( )] Watt
+\end{lstlisting}
+\tcblower
+\prevsm{Welche Einheit hat Energie?\\[2pt]
+$\circ$~Newton\\
+$\bullet$~\textbf{Joule}\\
+$\circ$~Watt\\[2pt]
+{\footnotesize Genau \emph{eine} richtige Antwort: \texttt{[(X)]}.}}
+\end{liacard}
+
+% --- A12. Zahleneingabe ---------------------------------------------
+\begin{liacard}{Quizformate / Zahleneingabe\aufglia{12}}
+\begin{lstlisting}[language=lia]
+E_kin für m=4 kg,
+v=27 m/s in Joule?
+
+[[1458]]
+\end{lstlisting}
+\tcblower
+\prevsm{$E_\text{kin}$ für $m=4$, $v=27$?\\[2pt]
+\fbox{\strut\hspace{5em}}\\[3pt]
+{\footnotesize Akzeptiert \texttt{1458}, \texttt{1458.0}, \texttt{1.458e3}.\\
+Toleranz: \texttt{[[1458 $\pm$ 1]]}.}}
+\end{liacard}
+
+% --- A13. Mehrfachauswahl -------------------------------------------
+\begin{liacard}{Quizformate / Mehrfachauswahl\aufglia{13}}
+\begin{lstlisting}[language=lia]
+Wovon hängt E_pot ab?
+
+- [[X]] Masse m
+- [[X]] Höhe h
+- [[ ]] Geschwindigkeit v
+- [[X]] Gravitation g
+\end{lstlisting}
+\tcblower
+\prevsm{Wovon hängt $E_\text{pot}$ ab?\\[2pt]
+\faCheckSquare~Masse $m$\\
+\faCheckSquare~Höhe $h$\\
+\faSquare~Geschwindigkeit $v$\\
+\faCheckSquare~Gravitation $g$\\[2pt]
+{\footnotesize \texttt{[[X]]} = beliebig viele richtig.}}
+\end{liacard}
+
+% =====================================================================
+% Block D — Hilfen & ausführbarer Code (Aufgaben 14-15)
+% =====================================================================
+
+% --- A14. Hinweise & Spoiler ----------------------------------------
+\begin{liacard}{Hinweise \& Spoiler\aufglia{14}}
+\begin{lstlisting}[language=lia]
+[[1458]]
+- [[?]] Formel:
+        1/2 m v^2
+*******************
+
+E_kin = 1458 J
+
+*******************
+\end{lstlisting}
+\tcblower
+\prevsm{\faQuestionCircle~Stufe 1: Hinweis \texttt{[[?]]}
+(klappbar).\\[3pt]
+Stufe 2: Lösungsblock zwischen zwei
+\texttt{*****}-Zeilen --- koppelt sich
+automatisch an das Quiz darüber.\\[2pt]
+{\footnotesize Zweistufige Hilfe = wirksame Binnendifferenzierung.}}
+\end{liacard}
+
+% --- A15. Code-Blöcke (Pyodide) -------------------------------------
+\begin{liacard}{Code-Blöcke\aufglia{15}}
+\begin{lstlisting}[language=lia]
+```python  e_kin.py
+m = 4; v = 27
+E = 0.5 * m * v**2
+print(E)
+```
+@Pyodide.eval
+\end{lstlisting}
+\tcblower
+\prevsm{\colorbox{codebg}{\parbox{0.85\linewidth}{\ttfamily\scriptsize m = 4; v = 27\\E = 0.5*m*v**2\\print(E)}}\\[2pt]
+\faPlay~\textbf{Run}~~\textcolor{liagreen}{\texttt{> 1458.0}}\\[2pt]
+{\footnotesize \texttt{@Pyodide.eval} direkt darunter setzt den
+Run-Button. Setzt den \texttt{Pyodide}-Import (A1) voraus.}}
+\end{liacard}
+
+\end{multicols}
+
+% --- Untere Zeile: LiaScript-Templates (volle Breite) ---------------
+\noindent
+\begin{liainfo}{\faPuzzlePiece~~LiaScript-Templates — im Header per \texttt{import:} einbinden (Auswahl aus \texttt{github.com/LiaTemplates})}
+\footnotesize
+\begin{minipage}[t]{0.24\linewidth}
+\textbf{\color{liagreen}\faTerminal~~Code ausführen}\\[1pt]
+$\bullet$~\texttt{Pyodide}~–~Python\\
+$\bullet$~\texttt{Skulpt}~–~Python (leichter)\\
+$\bullet$~\texttt{Lua}~–~Lua\\
+$\bullet$~\texttt{JSCPP}~–~C++\\
+$\bullet$~\texttt{Tau-Prolog}~–~Prolog
+\end{minipage}\hfill
+\begin{minipage}[t]{0.24\linewidth}
+\textbf{\color{liagreen}\faChartBar~~Visualisieren}\\[1pt]
+$\bullet$~\texttt{mermaid\_template}~–~Diagramme\\
+$\bullet$~\texttt{JSXGraph}~–~Mathematik\\
+$\bullet$~\texttt{Vega}~–~Datenvisualisierung\\
+$\bullet$~\texttt{Tikz-Jax}~–~Tikz-Grafiken\\
+$\bullet$~\texttt{ABCjs}~–~Musiknotation
+\end{minipage}\hfill
+\begin{minipage}[t]{0.24\linewidth}
+\textbf{\color{liagreen}\faFlask~~Simulation \& Daten}\\[1pt]
+$\bullet$~\texttt{PhET}~–~Physik-Simulationen\\
+$\bullet$~\texttt{Wikimedia}~–~Commons-Einbettung\\
+$\bullet$~\texttt{AlaSQL}~/~\texttt{SQLite}~–~SQL\\
+$\bullet$~\texttt{Random}~–~Quiz-Banken\\
+$\bullet$~\texttt{citations}~–~BibTeX/CSL
+\end{minipage}\hfill
+\begin{minipage}[t]{0.24\linewidth}
+\textbf{\color{liagreen}\faGithub~~Übersicht}\\[1pt]
+$\bullet$~\texttt{github.com/LiaTemplates}\\
+$\bullet$~\texttt{github.com/LiaTemplates/Index}\\
+$\bullet$~\texttt{github.com/LiaPlayground}\\
+$\bullet$~Live-Editor:\\
+\hspace*{0.6em}\texttt{liascript.github.io/LiveEditor}
+\end{minipage}
+\end{liainfo}
+
+\vspace{4pt}
+{\sffamily\scriptsize\color{muted}
+\faInfoCircle~Live-Editor: \textbf{liascript.github.io/LiveEditor}\hfill
+\faBook~Doku: \textbf{liascript.github.io}\hfill
+\faGithub~\textbf{github.com/LiaScript} \quad
+CC-BY-SA 4.0 — Sebastian Zug, André Dietrich · OPAL Schule meets LiaScript 2026}
+
+\end{document}
