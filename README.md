@@ -1,3 +1,5 @@
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/README.md)
+
 # OPAL Schule meets LiaScript
 
 > Online-Workshop für die Referent:innen der **Medienpädagogischen Zentren in Sachsen**
