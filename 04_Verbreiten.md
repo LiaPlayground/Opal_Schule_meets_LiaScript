@@ -51,8 +51,6 @@ In [Phase 3](03_Anwenden_Vorlage.md) haben Sie mit der Hand gespürt, *wie* ein 
 
 ## Teil A — KI als Co-Autorin für LiaScript-Kurse
 
-### Die Ausgangslage hat sich verändert
-
 Vor zwei Jahren hieß die Antwort auf „Wie schreibe ich einen LiaScript-Kurs?" noch: *„Cheat Sheet öffnen, Syntax nachschlagen, ausprobieren."* Heute heißt sie zunehmend: *„Beschreiben Sie der KI, was Sie unterrichten wollen — und prüfen Sie die Vorlage."*
 
 > [!NOTE]
@@ -132,7 +130,7 @@ Die KI liefert in einer Antwort ein vollständiges, sofort renderbares `.md` —
 
 **************************************
 
-           {{1}}
+           {{1-2}}
 **************************************
 
 **Was bleibt für die Lehrkraft zu tun?**
@@ -166,9 +164,9 @@ In [Phase 2](02_Verstehen.md) haben wir festgehalten: Ein LiaScript-Kurs ist ein
 | ------------------------- | -------------------------------------- | ------------------------------------------------------------------------ |
 | **Data-URI**              | Ein Link, der den Kurs enthält         | Schnelle Vorschau, kurze Materialien, Versand per Mail                   |
 | **ZIP-Export**            | Alle Dateien als Archiv                | Vollständige Kurse mit Bildern, Offline-Nutzung im Klassenraum           |
-| **Git-Repository**        | Quelle auf GitHub/GitLab               | Kollaborative Pflege, Versionierung, stabiler Link                       |
 | **OPAL Schule nativ**     | ZIP-Datei im OPAL-Kursbaustein         | Einbettung in OPAL — **schnell, ohne Konvertierung**, ohne Lernstand     |
 | **OPAL Schule via SCORM** | SCORM-Paket im OPAL-Kursbaustein       | Einbettung in OPAL — **mit Lernstand-Erfassung** im OPAL-Notenheft       |
+| **Git-Repository**        | Quelle auf GitHub/GitLab               | Kollaborative Pflege, Versionierung, stabiler Link                       |
 
 ### 1. Verbreitung per Data-URI
 
@@ -178,21 +176,102 @@ In [Phase 2](02_Verstehen.md) haben wir festgehalten: Ein LiaScript-Kurs ist ein
 Im LiveEditor lassen Sie sich aus dem Menü eine **Data-URI** erzeugen. Diese URL können Sie per E-Mail, Chat oder QR-Code weitergeben — beim Öffnen erscheint der Kurs sofort im LiaScript-Player.
 
 > [!NOTE]
-> **Wofür im Schulalltag besonders nützlich:** Schnelle Vertretungsstunden-Materialien, ein kurzer Selbsttest per Beamer-QR-Code, ein Mail-Anhang an eine kranke Kollegin. **Grenze:** Data-URIs werden mit Kurslänge sehr lang — für umfangreichere Materialien wechseln Sie auf Weg 2 oder 3.
+> **Wofür im Schulalltag besonders nützlich:** Schnelle Vertretungsstunden-Materialien, ein kurzer Selbsttest per Beamer-QR-Code, ein Mail-Anhang an eine kranke Kollegin. **Grenze:** Data-URIs werden mit Kurslänge sehr lang — für umfangreichere Materialien wechseln Sie auf Weg 2 oder 5.
 
 ### 2. Verbreitung per ZIP-Datei
 
-Im LiveEditor können Sie Ihren Kurs als **ZIP-Datei** exportieren. Diese Archivdatei enthält die Markdown-Quelle plus alle eingebetteten Bilder und lokal referenzierten Ressourcen. Die ZIP-Datei können Sie beliebig verbreiten — per Mail, über Schul-Cloud, USB-Stick, internes Schulnetz.
+Im LiveEditor können Sie Ihren Kurs als **ZIP-Datei** exportieren. Diese Archivdatei enthält die Markdown-Quelle plus alle eingebetteten Bilder und lokal referenzierten Ressourcen. Die ZIP-Datei können Sie beliebig verbreiten — per Mail, über Schul-Cloud, USB-Stick, internes Schulnetz oder Cloudanbieter wie NextCloud, OneDrive usw.
 
 > [!IMPORTANT]
-> **So öffnen die Empfänger:innen das ZIP:** **Nicht entpacken** — die ZIP-Datei direkt per Drag & Drop in den [LiveEditor](https://liascript.github.io/LiveEditor/) ziehen. Der Editor liest das Archiv ein, stellt die Quelle her und wechselt in den Player-Modus.
+> **So öffnen die Empfänger:innen das ZIP:** **Nicht entpacken.** Stattdessen die LiaScript-Player-Seite [**liascript.github.io/course/**](https://liascript.github.io/course/) öffnen und das ZIP-Archiv unter **„Courses"** importieren. Der Player liest das Archiv ein und startet den Kurs direkt.
+
+Bei der Distribution via Cloud gibt es einige Fallstricke zu beachten. Je nach Anbieter müssen Sie die ZIP-Datei entweder öffentlich freigeben oder einen speziellen Link-Format verwenden, damit der Player sie lesen kann. Hier lohnt sich ein kurzer Testlauf mit einem Kollegen, bevor Sie den Link an die ganze Klasse oder Schule weitergeben.
 
 > [!NOTE]
-> **Worauf Sie achten sollten:** Ein direktes Laden per URL (also `liascript.github.io/course/?<zip-url>`) funktioniert *nicht*. Wenn Sie ZIP per Cloud-Link teilen, geben Sie immer den Hinweis mit: *ZIP herunterladen, dann in den LiveEditor ziehen*.
+> Gegenwärtig funktioniert das Teilen über DropBox sehr zuverlässig. Dazu muss beim Link zum ZIP-Archiv die Endung `?raw=1` beigefügt werden. Beispiel: `https://www.dropbox.com/s/abc123/MeinKurs.zip?raw=1`. Diese URL wird dann einfach auf https://liascript.github.io/course/ als Adresse angegeben.
 
-> **Schul-Szenario:** Eine WLAN-lose Computer-AG bekommt die ZIP auf den Schulserver gelegt — alle Schüler:innen ziehen sich das Archiv und arbeiten *offline* an den LiaScript-Materialien.
+An Lösungen für NextCloud und OneDrive wird gearbeitet — hier ist die Lage aktuell etwas uneinheitlich, je nach Version und Konfiguration des Cloud-Servers.
 
-### 3. Verbreitung über GitHub oder GitLab
+### 3. OPAL Schule nativ
+
+> [!IMPORTANT]
+> **Die gute Nachricht für sächsische Lehrkräfte:** OPAL Schule kann LiaScript-Kurse **direkt rendern** — kein SCORM-Export nötig, keine Konvertierung. Ein ZIP aus dem LiveEditor (wie in Weg 2 beschrieben) lässt sich in einen OPAL-Kursbaustein hochladen, und der eingebaute Renderer zeigt den Kurs in der gewohnten OPAL-Umgebung an.
+
+           {{0-1}}
+**************************************
+
+**Die native OPAL-Einbettung Schritt für Schritt**
+
+| Schritt | Was tun?                                                                                                       |
+| ------- | -------------------------------------------------------------------------------------------------------------- |
+| 1       | Im LiveEditor den Kurs als **ZIP-Datei** exportieren (gleiches Format wie in Weg 2)                            |
+| 2       | In OPAL Schule den Kurs-Editor öffnen → **Kursbaustein „Einzelne Seite" oder „CP-Lerninhalt" hinzufügen**       |
+| 3       | ZIP-Datei hochladen → die Markdown-Datei als Startseite auswählen → Bezeichnung vergeben → speichern           |
+| 4       | Baustein freigeben — Lernende sehen den LiaScript-Kurs ab jetzt **direkt im OPAL-Schule-Klassenraum**           |
+
+**************************************
+
+           {{1}}
+**************************************
+
+**Was funktioniert — und was nicht**
+
+| Aspekt                            | Nativer LiaScript-Renderer in OPAL                       |
+| --------------------------------- | -------------------------------------------------------- |
+| Vollständige Darstellung des Kurses | ✓ Formeln, Animationen, Embeds, Quizze, Code, Vorlesen   |
+| Lernende arbeiten Selbsttests durch | ✓ Quiz-Feedback erscheint direkt im Browser              |
+| **Erfassung der Quiz-Ergebnisse** im OPAL-Notenheft | ✗ kein Tracking — was die Schülerin geantwortet hat, weiß OPAL nicht |
+| **Sichtbarkeit für die Lehrkraft**, wer welchen Stand hat | ✗ ebenfalls nicht                                        |
+
+> **Wann reicht das?** Für **formatives** Selbstlernen ohne Notenrelevanz, für Vertretungsstunden, für Übungsphasen, für Differenzierungsangebote. Genau das, was Lommatzsch in [Phase 2](02_Verstehen.md) beschrieben hat — *„Schülerinnen und Schüler bekommen die Rückmeldung sofort, ohne dass die Lehrkraft jeden Tisch ablaufen muss."*
+
+> **Wann reicht es nicht?** Sobald Sie als Lehrkraft **summativ** prüfen wollen oder einen *Klassenüberblick* über den Lernstand brauchen. Dann führt Weg 4 (SCORM) zum Ziel.
+
+**************************************
+
+### 4. OPAL Schule via SCORM
+
+Wenn Sie die Quiz-Ergebnisse Ihrer Schüler:innen **im OPAL-Notenheft sehen** möchten, exportieren Sie den Kurs als **SCORM-Paket** und laden es in den entsprechenden OPAL-Kursbaustein. Damit erhält LiaScript die volle Anbindung an die OPAL-Klassenraumfunktionen — wie eine ONYX-Aufgabe, aber mit der ganzen LiaScript-Mächtigkeit dahinter.
+
+> [!NOTE]
+> **Was SCORM bedeutet:** SCORM ist der Industriestandard, mit dem Lernmanagementsysteme Inhalte einlesen *und gleichzeitig Lernstand erfassen* — ob ein Quiz bearbeitet wurde, welche Antworten kamen, ob ein Kurs als „abgeschlossen" gilt.
+
+           {{0-1}}
+**************************************
+
+**Die SCORM-Einbettung Schritt für Schritt**
+
+| Schritt | Was tun?                                                                                          |
+| ------- | ------------------------------------------------------------------------------------------------- |
+| 1       | LiaScript-Kurs als SCORM-Paket exportieren (per [LiaScript-Exporter](https://github.com/LiaScript/LiaScript-Exporter) - aktuell noch ein Zusatzprogramm) |
+| 2       | In OPAL Schule den Kurs-Editor öffnen → **Kursbaustein „SCORM-Lerninhalt" hinzufügen**             |
+| 3       | SCORM-ZIP hochladen → Bezeichnung vergeben → speichern                                            |
+| 4       | Baustein freigeben — Quiz-Ergebnisse erscheinen jetzt im **OPAL-Bewertungswerkzeug**               |
+
+**************************************
+
+           {{1}}
+**************************************
+
+**Welcher der beiden OPAL-Wege passt wann?**
+
+| Szenario                                                              | Empfohlener Weg               |
+| --------------------------------------------------------------------- | ----------------------------- |
+| Differenzierungs-Material, Vertretungsstunde, freiwillige Übung       | Weg 3 — nativer ZIP-Upload    |
+| Erste Begegnung der Lehrkraft mit LiaScript-in-OPAL                   | Weg 3 — nativer ZIP-Upload    |
+| Bewertete Übungssequenz, Vorbereitung Klassenarbeit, Lernstandsdiagnose | Weg 4 — SCORM-Paket           |
+| Materialien, die später auch außerhalb OPAL laufen sollen             | beide funktionieren           |
+
+> [!IMPORTANT]
+> **Der entscheidende Unterschied zu „klassischen" OPAL-Inhalten:** Eine ONYX-Aufgabe ist *in* OPAL. Ein LiaScript-Kurs *läuft* in OPAL Schule — aber **wohnt nicht dort**. Wenn Sie nächstes Jahr den Kurs überarbeiten, ändern Sie ihn in der Markdown-Quelle (oder lassen die KI helfen), erzeugen ein neues ZIP bzw. SCORM und laden es hoch — die Quelle bleibt unter Ihrer Kontrolle, in jedem System.
+
+**************************************
+
+> [!TIP]
+> **Empfehlung für Ihre Multiplikatoren-Praxis:** Starten Sie mit Lehrkräften *immer* über Weg 3 (nativ). Der erste Klickerfolg — "es funktioniert tatsächlich in OPAL!" — ist die wichtigste Hürde. SCORM kommt erst dann ins Spiel, wenn die Lehrkraft konkret Tracking braucht.
+
+
+### 5. Verbreitung über GitHub oder GitLab
 
 Der schmalste Bauplan eines LiaScript-Kurses ist eine einzige Markdown-Datei — und genau das macht **GitHub** und **GitLab** zum natürlichen Zuhause für Ihre Materialien. Sie legen den Kurs als Datei in ein Repository, und der LiaScript-Player rendert ihn direkt aus der **Raw-URL** des Repositorys.
 
@@ -224,87 +303,6 @@ Der schmalste Bauplan eines LiaScript-Kurses ist eine einzige Markdown-Datei —
 Lommatzschs Aufgabensammlung auf [mint-the-gap.github.io/Aufgabensammlung](https://mint-the-gap.github.io/Aufgabensammlung/) ist ein laufendes Beispiel: ein einziges GitHub-Repository, an dem eine Lehrkraft seit Jahren wächst — und das mehrere Klassen versorgt.
 
 **************************************
-
-### 4. OPAL Schule nativ — ZIP-Upload ohne Konvertierung
-
-> [!IMPORTANT]
-> **Die gute Nachricht für sächsische Lehrkräfte:** OPAL Schule kann LiaScript-Kurse **direkt rendern** — kein SCORM-Export nötig, keine Konvertierung. Ein ZIP aus dem LiveEditor (wie in Weg 2 beschrieben) lässt sich in einen OPAL-Kursbaustein hochladen, und der eingebaute Renderer zeigt den Kurs in der gewohnten OPAL-Umgebung an.
-
-           {{0-1}}
-**************************************
-
-**Die native OPAL-Einbettung Schritt für Schritt**
-
-| Schritt | Was tun?                                                                                                       |
-| ------- | -------------------------------------------------------------------------------------------------------------- |
-| 1       | Im LiveEditor den Kurs als **ZIP-Datei** exportieren (gleiches Format wie in Weg 2)                            |
-| 2       | In OPAL Schule den Kurs-Editor öffnen → **Kursbaustein „Einzelne Seite" oder „CP-Lerninhalt" hinzufügen**       |
-| 3       | ZIP-Datei hochladen → die Markdown-Datei als Startseite auswählen → Bezeichnung vergeben → speichern           |
-| 4       | Baustein freigeben — Lernende sehen den LiaScript-Kurs ab jetzt **direkt im OPAL-Schule-Klassenraum**           |
-
-> [!NOTE]
-> **Den genauen Baustein-Namen** schlagen Sie bitte in der OPAL-Schule-Hilfe Ihrer Einrichtung nach — er kann zwischen Versionen variieren. Entscheidend ist die *Funktion*: ein Baustein, der ein ZIP-Archiv aufnimmt und HTML/Markdown daraus ausliefert.
-
-**************************************
-
-           {{1}}
-**************************************
-
-**Was funktioniert — und was nicht**
-
-| Aspekt                            | Nativer LiaScript-Renderer in OPAL                       |
-| --------------------------------- | -------------------------------------------------------- |
-| Vollständige Darstellung des Kurses | ✓ Formeln, Animationen, Embeds, Quizze, Code, Vorlesen   |
-| Lernende arbeiten Selbsttests durch | ✓ Quiz-Feedback erscheint direkt im Browser              |
-| **Erfassung der Quiz-Ergebnisse** im OPAL-Notenheft | ✗ kein Tracking — was die Schülerin geantwortet hat, weiß OPAL nicht |
-| **Sichtbarkeit für die Lehrkraft**, wer welchen Stand hat | ✗ ebenfalls nicht                                        |
-
-> **Wann reicht das?** Für **formatives** Selbstlernen ohne Notenrelevanz, für Vertretungsstunden, für Übungsphasen, für Differenzierungsangebote. Genau das, was Lommatzsch in [Phase 2](02_Verstehen.md) beschrieben hat — *„Schülerinnen und Schüler bekommen die Rückmeldung sofort, ohne dass die Lehrkraft jeden Tisch ablaufen muss."*
-
-> **Wann reicht es nicht?** Sobald Sie als Lehrkraft **summativ** prüfen wollen oder einen *Klassenüberblick* über den Lernstand brauchen. Dann führt Weg 5 (SCORM) zum Ziel.
-
-**************************************
-
-### 5. OPAL Schule via SCORM — mit Lernstand-Erfassung
-
-Wenn Sie die Quiz-Ergebnisse Ihrer Schüler:innen **im OPAL-Notenheft sehen** möchten, exportieren Sie den Kurs als **SCORM-Paket** und laden es in den entsprechenden OPAL-Kursbaustein. Damit erhält LiaScript die volle Anbindung an die OPAL-Klassenraumfunktionen — wie eine ONYX-Aufgabe, aber mit der ganzen LiaScript-Mächtigkeit dahinter.
-
-> [!NOTE]
-> **Was SCORM bedeutet:** SCORM ist der Industriestandard, mit dem Lernmanagementsysteme Inhalte einlesen *und gleichzeitig Lernstand erfassen* — ob ein Quiz bearbeitet wurde, welche Antworten kamen, ob ein Kurs als „abgeschlossen" gilt.
-
-           {{0-1}}
-**************************************
-
-**Die SCORM-Einbettung Schritt für Schritt**
-
-| Schritt | Was tun?                                                                                          |
-| ------- | ------------------------------------------------------------------------------------------------- |
-| 1       | LiaScript-Kurs als SCORM-Paket exportieren (per [LiaScript-Exporter](https://github.com/LiaScript/LiaScript-Exporter) im LiveEditor oder per CLI) |
-| 2       | In OPAL Schule den Kurs-Editor öffnen → **Kursbaustein „SCORM-Lerninhalt" hinzufügen**             |
-| 3       | SCORM-ZIP hochladen → Bezeichnung vergeben → speichern                                            |
-| 4       | Baustein freigeben — Quiz-Ergebnisse erscheinen jetzt im **OPAL-Bewertungswerkzeug**               |
-
-**************************************
-
-           {{1}}
-**************************************
-
-**Welcher der beiden OPAL-Wege passt wann?**
-
-| Szenario                                                              | Empfohlener Weg               |
-| --------------------------------------------------------------------- | ----------------------------- |
-| Differenzierungs-Material, Vertretungsstunde, freiwillige Übung       | Weg 4 — nativer ZIP-Upload    |
-| Erste Begegnung der Lehrkraft mit LiaScript-in-OPAL                   | Weg 4 — nativer ZIP-Upload    |
-| Bewertete Übungssequenz, Vorbereitung Klassenarbeit, Lernstandsdiagnose | Weg 5 — SCORM-Paket           |
-| Materialien, die später auch außerhalb OPAL laufen sollen             | beide funktionieren           |
-
-> [!IMPORTANT]
-> **Der entscheidende Unterschied zu „klassischen" OPAL-Inhalten:** Eine ONYX-Aufgabe ist *in* OPAL. Ein LiaScript-Kurs *läuft* in OPAL Schule — aber **wohnt nicht dort**. Wenn Sie nächstes Jahr den Kurs überarbeiten, ändern Sie ihn in der Markdown-Quelle (oder lassen die KI helfen), erzeugen ein neues ZIP bzw. SCORM und laden es hoch — die Quelle bleibt unter Ihrer Kontrolle, in jedem System.
-
-**************************************
-
-> [!TIP]
-> **Empfehlung für Ihre Multiplikatoren-Praxis:** Starten Sie mit Lehrkräften *immer* über Weg 4 (nativ). Der erste Klickerfolg — "es funktioniert tatsächlich in OPAL!" — ist die wichtigste Hürde. SCORM kommt erst dann ins Spiel, wenn die Lehrkraft konkret Tracking braucht.
 
 ## Teil C — Was Sie an Ihre Lehrkräfte weitergeben
 
@@ -354,20 +352,9 @@ Diese Choreografie ist robust: Sie funktioniert für 90 Minuten an einer einzige
 
 > [!TIP]
 > 1. **KI als Co-Autorin:** Zwei Stufen — LiaSkill für Schnelle, Teaching-Agent für Strukturierte. Beides offen verfügbar, beides reduziert die Einstiegshürde drastisch.
-> 2. **Fünf Verbreitungswege:** Data-URI (Klick-Demo) → ZIP (offline) → GitHub (kollaborativ) → **OPAL nativ** (ZIP-Upload, kein Tracking) → **OPAL via SCORM** (mit Lernstand-Erfassung). Empfehlung: Lehrkräfte zuerst über den nativen Weg ins OPAL bringen.
+> 2. **Fünf Verbreitungswege:** Data-URI (Klick-Demo) → ZIP (offline) → **OPAL nativ** (ZIP-Upload, kein Tracking) → **OPAL via SCORM** (mit Lernstand-Erfassung) → GitHub (kollaborativ). Empfehlung: Lehrkräfte zuerst über den nativen Weg ins OPAL bringen.
 > 3. **OER bleibt erhalten:** In allen fünf Wegen reist der Markdown-Quelltext mit. Wer den Kurs erhält, kann ihn anpassen, weiterentwickeln, in eigenen Kontexten wiederverwenden.
 > 4. **Sie sind dran.** Diese Argumentation tragen Sie weiter — an Schulen, an Fachschaften, an Schulleitungen.
-
-## Auftrag des Sächsischen Landesamts — Bilanz
-
-Vier Punkte standen am Anfang im Briefing. Schauen wir, wo wir stehen:
-
-| Auftrag                                       | Wo behandelt?                                                                            |
-| --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| (1) Vorhandenes Material umwandeln            | [Phase 3 — Anwenden](03_Anwenden_Vorlage.md) von Hand · in diesem Modul mit KI            |
-| (2) Unterstützung durch KI-Generator          | **Diese Phase, Teil A** — LiaSkill + Teaching-Agent                                       |
-| (3) Einsatz ohne Medienbuch                   | [Phase 1 — Erleben](01_Erleben.md) ✓ und [Phase 2 — Verstehen](02_Verstehen.md) (OER)     |
-| (4) Implementierung in OPAL Schule            | **Diese Phase, Teil B** — nativer ZIP-Upload (ohne Tracking) oder SCORM (mit Lernstand)   |
 
 ## Kontakt und Material
 
@@ -376,6 +363,9 @@ Vier Punkte standen am Anfang im Briefing. Schauen wir, wo wir stehen:
 - **Kontakt:** sebastian.zug@informatik.tu-freiberg.de · andre.dietrich@informatik.tu-freiberg.de
 
 > **Vielen Dank — und viel Erfolg bei Ihren eigenen Workshops!**
+
+> [!TIP]
+> Kommen Sie bei Unklarheiten gern auf uns zu - wir unterstützen Sie bei der Vorbereitung Ihrer eigenen Workshops, bei der Anpassung des Materials oder bei Fragen zu KI und OPAL Schule.
 
 ## Lizenz
 
