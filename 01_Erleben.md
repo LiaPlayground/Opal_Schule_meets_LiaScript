@@ -203,7 +203,6 @@ Berechnen Sie die kinetische Energie $E_\text{kin}$ in Joule.
 
 - [[?]] Hinweis: $E_\text{kin} = \tfrac{1}{2}\, m\, v^2$ — achten Sie auf das Quadrat.
 - [[?]] Stolperstelle: $27^2 = 729$, anschließend $\cdot 4 = 2916$, dann $\cdot \tfrac{1}{2} = 1458$.
-
 ***********************************************
 
 $E_\text{kin} = \tfrac{1}{2} \cdot 4\,\text{kg} \cdot (27\,\text{m/s})^2 = 2 \cdot 729\,\text{J} = 1458\,\text{J}$
