@@ -5,54 +5,34 @@
 
 ## Worum geht es?
 
-Lehrkräfte möchten **motivierende, interaktive Materialien** einsetzen — zugeschnitten auf ihre Lerngruppe — und sie mit Kolleg:innen teilen. In der Praxis ist das mühsam: jedes Format ein eigenes Werkzeug, kaum etwas lässt sich aus OPAL Schule herauslösen, und individuelle Anpassung wird zur Click-Marathon-Aufgabe.
+Lehrkräfte möchten **motivierende, interaktive Materialien** einsetzen — zugeschnitten auf ihre Lerngruppe — und sie mit Kolleg:innen teilen. In der Praxis ist das mühsam: jedes Format ein eigenes Werkzeug und individuelle Anpassung wird zur Click-Marathon-Aufgabe.
 
-Dieser Workshop präsentiert die Möglichkeiten von **[LiaScript](https://liascript.github.io)** — erweitertes Markdown, das Formeln, Quizze, eingebettete Simulationen und ausführbaren Code in *einer einzigen Textdatei* zusammenführt, die im Browser läuft und sich als echte OER teilen lässt.
+Dieser Workshop präsentiert die Möglichkeiten von **[LiaScript](https://liascript.github.io)** — erweitertes Markdown, das Formeln, Quizze, eingebettete Simulationen und ausführbaren Code in *einer einzigen Textdatei* zusammenführt, die im Browser läuft und sich als echte OER teilen lässt. Diese wird dann zum Beispiel in OPAL Schule hochgeladen, um sie den Lernenden zugänglich zu machen.
 
-Als roter Faden dient ein **realer Stoff aus OPAL Schule**: das Energie-Kapitel aus „BGY — 11. Klasse Physik". Sie sehen, wie aus dem Copy-Paste-Rohmaterial (zerfallene Formeln, Plaintext-Quizze) ein vollwertiger, interaktiver LiaScript-Kurs wird — und bauen diese Transformation selbst nach.
+## Wer sind wir?
 
-> **Sie sind Multiplikator:innen.** Alles, was Sie hier erleben, geben Sie später an Lehrkräfte an Ihren Schulen weiter. Achten Sie deshalb nicht nur auf das *Was*, sondern auch auf das *Wie würde ich das im Kollegium erklären*.
++ **Prof. Dr. Sebastian Zug** — Professor für Softwaretechnologie und Robotik, TU Bergakademie Freiberg.
++ **Dr. André Dietrich** — Wissenschaftlicher Mitarbeiter, TU Bergakademie Freiberg, mit Schwerpunkt auf Digitale Lehr-Lern-Werkzeuge.
++ **Lisette Hoffmann** — OPAL Schule, BPS Bildungsportal Sachsen GmbH
++ **Susann Lenk** — Referentin am Landesamt für Schule und Bildung, Referat 53 | Medienbildung und Digitalisierung
 
-## Das weitere Vorgehen — vier Phasen
+## Agenda — vier Phasen
 
-Der Workshop folgt der Choreografie **Erleben → Verstehen → Anwenden → Verbreiten**. Klicken Sie auf den jeweiligen Badge, um die Phase direkt im LiaScript-Player zu öffnen.
+Der Workshop folgt der Choreografie **Erleben → Verstehen → Anwenden → Verbreiten**. Klicken Sie in der Material-Spalte auf den jeweiligen Link, um die Phase direkt im Browser zu öffnen.
 
-### Phase 1 · Erleben *(20 min)*
-
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/01_Erleben.md)
-
-Sie durchlaufen einen **fertigen Demo-Kurs** zum Energiebegriff und probieren alle interaktiven Elemente selbst aus — Video, eingebettete PhET-Simulation, ausführbarer Python-Code, drei Quizformate mit Lösungswegen. Am Ende das Reveal: *woher* dieser Stoff stammt.
-
-### Phase 2 · Verstehen *(15 min)*
-
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/02_Verstehen.md)
-
-Kurzvortrag zum *Warum*: Welches Problem löst LiaScript für Lehrkräfte? Was sind die **drei technischen Kernideen** (Trennung von Inhalt und Darstellung, Interaktion als Teil der Sprache, der Browser als Laufzeitumgebung)? Und wie verträgt sich das mit OPAL Schule?
-
-### Phase 3 · Anwenden *(45 min — das Herzstück)*
-
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Vorlage.md)
-
-**Hands-on.** Sie bekommen das Rohmaterial [`Energie.md`](original_material/Energie.md) als Skelett mit 15 progressiven Aufgaben und bauen daraus Schritt für Schritt selbst einen LiaScript-Kurs — von Formeln über Quizze bis zur eingebetteten Simulation.
-
-- ✏️ **Arbeitsvorlage im LiveEditor:** [Phase 3 zum Bearbeiten öffnen](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Vorlage.md) *(Quelltext + Rendering nebeneinander — sofort losschreiben, kein lokales Setup)*
-- 👁 **Nur ansehen:** [Vorlage im Player](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Vorlage.md)
-- ✅ **Musterlösung:** [03_Anwenden_Loesung.md im Player](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Loesung.md) *(erst nach dem eigenen Versuch ansehen)*
-- 📄 **Cheatsheet zum Ausdrucken:** [cheatSheet/cheatsheet.pdf](cheatSheet/cheatsheet.pdf) — zweiseitige Syntax-Handreichung (Markdown + LiaScript). Jede Aufgabe verweist über `Cheatsheet-Abschnitt: …` auf die passende Karte.
-
-### Phase 4 · Verbreiten *(20 min)*
-
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/04_Verbreiten.md)
-
-Die zwei Fragen, die danach kommen: **Muss man das jedes Mal von Hand schreiben?** (KI als Co-Autorin — LiaSkill und Teaching-Agent) und **Wie kommt der Kurs zu den Lernenden?** (fünf Verbreitungswege, inklusive zweier OPAL-Schule-Pfade: nativ per ZIP-Upload und via SCORM mit Lernstand-Erfassung).
+<!-- data-type="none" -->
+| Phase | Dauer | Worum geht's? | Material |
+| ----- | ----- | ------------- | -------- |
+| **1 · Erleben**    | 20 min | Sie durchlaufen einen **fertigen Demo-Kurs** zum Energiebegriff und probieren alle interaktiven Elemente selbst aus — Video, eingebettete PhET-Simulation, ausführbarer Python-Code, drei Quizformate mit Lösungswegen. Am Ende das Reveal: *woher* dieser Stoff stammt. | [▶ Im Player öffnen](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/01_Erleben.md) |
+| **2 · Verstehen**  | 15 min | Kurzvortrag zum *Warum*: Welches Problem löst LiaScript für Lehrkräfte? Was sind die **drei technischen Kernideen** (Trennung von Inhalt und Darstellung, Interaktion als Teil der Sprache, der Browser als Laufzeitumgebung)? Und wie verträgt sich das mit OPAL Schule? | [▶ Im Player öffnen](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/02_Verstehen.md) |
+| **3 · Anwenden**   | 45 min *(Herzstück)* | **Hands-on.** Sie bekommen das Rohmaterial [`Energie.md`](original_material/Energie.md) als Skelett mit 15 progressiven Aufgaben und bauen daraus Schritt für Schritt selbst einen LiaScript-Kurs — von Formeln über Quizze bis zur eingebetteten Simulation. | ✏️ [Arbeitsvorlage im LiveEditor](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Vorlage.md) *(Quelltext + Rendering)* <br> 👁 [Nur ansehen (Player)](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Vorlage.md) <br> ✅ [Musterlösung](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Loesung.md) *(erst nach eigenem Versuch)* <br> 📄 [Cheatsheet (PDF)](cheatSheet/cheatsheet.pdf) — Syntax-Handreichung |
+| **4 · Verbreiten** | 20 min | Die zwei Fragen, die danach kommen: **Muss man das jedes Mal von Hand schreiben?** (KI als Co-Autorin — LiaSkill und Teaching-Agent) und **Wie kommt der Kurs zu den Lernenden?** (fünf Verbreitungswege, inklusive zweier OPAL-Schule-Pfade: nativ per ZIP-Upload und via SCORM mit Lernstand-Erfassung). | [▶ Im Player öffnen](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/04_Verbreiten.md) |
 
 ## So arbeiten Sie mit diesem Repository
 
-- **Direkt loslegen:** Es ist keine Installation nötig. Jeder Phasen-Badge öffnet den Kurs im Browser. Mit den **Pfeiltasten** (← / →) blättern Sie, über das **🌐-Symbol** schalten Sie die Sprache um, über das **Lautsprecher-Symbol** das Vorlesen.
-- **In den Quelltext schauen:** Jede Phase ist eine einzelne `.md`-Datei in diesem Repository — öffnen Sie sie, um zu sehen, wie wenig Text hinter der Interaktion steckt.
-- **Selbst bearbeiten:** Ziehen Sie eine `.md`-Datei in den [LiveEditor](https://liascript.github.io/LiveEditor/), um sie live zu verändern und das Ergebnis sofort zu sehen.
+Die gesamten Materialien zum Workshop liegen hier auf GitHub — Sie können sie direkt im Browser ansehen, herunterladen und als Grundlage für Ihre eigenen Fortbildungen verwenden.
 
-## Dateien im Überblick
+https://github.com/LiaPlayground/Opal_Schule_meets_LiaScript/tree/main
 
 | Datei | Inhalt |
 | ----- | ------ |

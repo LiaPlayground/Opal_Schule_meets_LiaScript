@@ -3,7 +3,7 @@ author:   Sebastian Zug, André Dietrich
 
 email:    sebastian.zug@informatik.tu-freiberg.de
 
-version:  0.1.0
+version:  0.1.1
 
 language: de
 
@@ -257,7 +257,7 @@ Wenn Sie die Quiz-Ergebnisse Ihrer Schüler:innen **im OPAL-Notenheft sehen** m�
 
 | Szenario                                                              | Empfohlener Weg               |
 | --------------------------------------------------------------------- | ----------------------------- |
-| Differenzierungs-Material, Vertretungsstunde, freiwillige Übung       | Weg 3 — nativer ZIP-Upload    |
+| Differenzierungs-Material, Vertretungsstunde, freiwillige Übung       | Weg 3 — nativer ZIP-Upload    |^
 | Erste Begegnung der Lehrkraft mit LiaScript-in-OPAL                   | Weg 3 — nativer ZIP-Upload    |
 | Bewertete Übungssequenz, Vorbereitung Klassenarbeit, Lernstandsdiagnose | Weg 4 — SCORM-Paket           |
 | Materialien, die später auch außerhalb OPAL laufen sollen             | beide funktionieren           |
@@ -268,7 +268,7 @@ Wenn Sie die Quiz-Ergebnisse Ihrer Schüler:innen **im OPAL-Notenheft sehen** m�
 **************************************
 
 > [!TIP]
-> **Empfehlung für Ihre Multiplikatoren-Praxis:** Starten Sie mit Lehrkräften *immer* über Weg 3 (nativ). Der erste Klickerfolg — "es funktioniert tatsächlich in OPAL!" — ist die wichtigste Hürde. SCORM kommt erst dann ins Spiel, wenn die Lehrkraft konkret Tracking braucht.
+> **Empfehlung für Ihre Multiplikatoren-Praxis:** Starten Sie mit Lehrkräften *immer* über Weg 3 (nativ). Der erste Klickerfolg — "es funktioniert tatsächlich in OPAL>!" — ist die wichtigste Hürde. SCORM kommt erst dann ins Spiel, wenn die Lehrkraft konkret Tracking braucht.
 
 
 ### 5. Verbreitung über GitHub oder GitLab
@@ -283,7 +283,7 @@ Der schmalste Bauplan eines LiaScript-Kurses ist eine einzige Markdown-Datei —
 > Genau dieses Muster nutzt auch der Badge oben auf jeder Workshop-Phase — schauen Sie sich den Link genauer an.
 
            {{0-1}}
-**************************************
+**************************************>
 
 **Was Sie dadurch gewinnen:**
 
@@ -301,50 +301,6 @@ Der schmalste Bauplan eines LiaScript-Kurses ist eine einzige Markdown-Datei —
 > **Der OER-Königsweg.** Repository = Quelle + Historie + Lizenz + Zusammenarbeitsplattform in einem. Die fünf V-Freiheiten aus [Phase 2](02_Verstehen.md) greifen hier *vollständig* — und das **kollaborativ**, nicht nur als einseitige Weitergabe.
 
 Lommatzschs Aufgabensammlung auf [mint-the-gap.github.io/Aufgabensammlung](https://mint-the-gap.github.io/Aufgabensammlung/) ist ein laufendes Beispiel: ein einziges GitHub-Repository, an dem eine Lehrkraft seit Jahren wächst — und das mehrere Klassen versorgt.
-
-**************************************
-
-## Teil C — Was Sie an Ihre Lehrkräfte weitergeben
-
-Sie sind die Multiplikator:innen. Was Sie in den vergangenen zwei Stunden gesehen und gemacht haben, geben Sie an Lehrer:innen weiter — und zwar in deutlich kürzerer Zeit. Drei Dinge nehmen Sie idealerweise mit:
-
-           {{0-1}}
-**************************************
-
-**1. Das Repository als Vorlage**
-
-Alles, was Sie heute gesehen haben, liegt unter [github.com/LiaPlayground/Opal_Schule_meets_LiaScript](https://github.com/LiaPlayground/Opal_Schule_meets_LiaScript) als CC-BY-SA-Material. Sie dürfen es als Grundlage für Ihre eigenen Fortbildungen verwenden, ergänzen, kürzen, ummontieren.
-
-**************************************
-
-           {{1-2}}
-**************************************
-
-**2. Die 4-Phasen-Choreografie**
-
-```ascii
-  ┌──────────────┐   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐
-  │   ERLEBEN    │ → │  VERSTEHEN   │ → │   ANWENDEN   │ → │  VERBREITEN  │
-  │              │   │              │   │              │   │              │
-  │  20 min      │   │  15 min      │   │  45 min      │   │  20 min      │
-  │  Demo-Kurs   │   │  Vortrag     │   │  Hands-on    │   │  KI + OPAL   │
-  └──────────────┘   └──────────────┘   └──────────────┘   └──────────────┘
-```
-
-Diese Choreografie ist robust: Sie funktioniert für 90 Minuten an einer einzigen Schule genauso wie für drei Halbtage in einer ganzen Region. Skalieren Sie über die Hands-on-Phase — Sie ist das Herzstück.
-
-**************************************
-
-           {{2}}
-**************************************
-
-**3. Die zwei Antworten auf die häufigsten Lehrkraft-Einwände**
-
-> *„Das ist mir zu technisch."*
-> → **„Sie schreiben nichts mehr selbst. Die KI macht das. Sie sagen ihr nur, *was* Sie unterrichten wollen — und prüfen, ob das Ergebnis Ihrer Klasse gerecht wird."**
-
-> *„Das passt nicht in unsere bestehende OPAL-Struktur."*
-> → **„Doch — OPAL Schule kann LiaScript sogar nativ rendern: ZIP-Upload in den passenden Kursbaustein, fertig. Wenn Sie Quiz-Ergebnisse im OPAL-Notenheft brauchen, geht das zusätzlich via SCORM. Aber der Quelltext bleibt in beiden Fällen offen und teilbar."**
 
 **************************************
 
