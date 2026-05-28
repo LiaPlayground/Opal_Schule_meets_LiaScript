@@ -68,7 +68,7 @@ Anschließend folgt ein kurzes **Reveal**, *woher* dieser Stoff stammt — und z
 > - Was hat vielleicht anders funktioniert als erwartet?
 
 > [!TIP]
-> **Bedienung:** Mit den **Pfeiltasten** (← / →) blättern Sie zwischen den Folien. Mit dem **Lautsprecher-Symbol** (oben rechts) aktivieren Sie das automatische Vorlesen. Über das **🌐-Symbol** schalten Sie die Sprache um (für DaZ-Lernende relevant). Rechts oben über das **i-Symbol** sehen Sie die Metadaten dieses Kurses.
+> **Bedienung:** Mit den **Pfeiltasten** (← / →) blättern Sie zwischen den Folien. Mit dem **Lautsprecher-Symbol** (oben rechts) aktivieren Sie das automatische Vorlesen. Über das **DE-Symbol** oben rechts schalten Sie die Sprache um (für DaZ-Lernende relevant). Rechts oben über das **i-Symbol** sehen Sie die Metadaten dieses Kurses.
 
 ## Bedienung im Überblick
 
@@ -114,8 +114,10 @@ Eine Besonderheit der kinetischen Energie: Die Geschwindigkeit geht **quadratisc
 
 > Eine **Verdopplung** der Geschwindigkeit führt zu einer **Vervierfachung** der kinetischen Energie.
 
-> **Mini-Aufgabe:** Klappen Sie zuerst Ihre eigene Antwort, dann die Lösung auf — wie ändert sich $E_\text{kin}$, wenn ein Auto seine Geschwindigkeit **verdreifacht**?
+**Mini-Aufgabe:** Um welchen **Faktor** ändert sich $E_\text{kin}$, wenn ein Auto seine Geschwindigkeit **verdreifacht**?
 
+[[9]]
+- [[?]] Hinweis: Die Geschwindigkeit geht **quadratisch** ein — überlegen Sie, was $3^2$ ergibt.
 ***********************************************
 
 Die Energie verneunfacht sich ($3^2 = 9$). Das ist der Grund, warum Bremswege im Straßenverkehr so dramatisch von der Geschwindigkeit abhängen — und ein klassisches Beispiel für den Anwendungsbezug, mit dem sich der Begriff im Unterricht greifbar machen lässt.
@@ -126,7 +128,10 @@ Die Energie verneunfacht sich ($3^2 = 9$). Das ist der Grund, warum Bremswege im
 
 > [!TIP]
 > **Definition:** **Spannenergie** ist eine spezielle Form der potentiellen Energie. Sie ist die Energie, die eine Feder besitzt, wenn sie gespannt oder auseinandergezogen ist:
-> $E_\text{spann} = \tfrac{1}{2}\, D\, s^2$ mit Federkonstante $D$ und Auslenkung $s$.
+>
+> $E_\text{spann} = \tfrac{1}{2}\, D\, s^2$ 
+>
+>mit Federkonstante $D$ und Auslenkung $s$.
 
 > [!NOTE]
 > **Worauf Sie in diesem Abschnitt achten sollten:** Die PhET-Simulation des Federpendels läuft **direkt eingebettet** in dieser Seite — kein Tab-Wechsel, keine zweite Anwendung, keine verlorene Aufgabenstellung. Das ist im klassischen OPAL-Kurs nicht möglich; dort ist der Link auf PhET ein „Verlassen-Sie-bitte-den-Kurs"-Schalter.
@@ -141,14 +146,14 @@ Die Energie verneunfacht sich ($3^2 = 9$). Das ist der Grund, warum Bremswege im
 > 1. Auf **Pause** stellen, **Gravitation = keine** und **Dämpfung = keine** wählen.
 > 2. Die Linie **Auslenkung** aktivieren.
 > 3. Eine Masse anhängen und die Feder leicht auslenken.
->
-> Formulieren Sie jeweils einen **„Je-desto-Satz"** über den Einfluss von:
->
-> - der **Auslenkung** auf $E_\text{spann}$
-> - der **Federkonstante** auf $E_\text{spann}$
-> - der **Masse** auf $E_\text{spann}$
-> - der **Gravitation** auf $E_\text{spann}$ *(jetzt darf der Gravitations-Regler bewegt werden)*
 
+> Formulieren Sie zunächst für sich jeweils einen **„Je-desto-Satz"** über den Einfluss von **Auslenkung**, **Federkonstante**, **Masse** und **Gravitation** auf $E_\text{spann}$ *(für die Gravitation darf der Regler jetzt bewegt werden)*. Kreuzen Sie anschließend an, welche Aussagen Ihre Beobachtungen stützen:
+
+- [[X]] Je größer die **Auslenkung** $s$, desto deutlich größer $E_\text{spann}$ — **quadratischer** Zusammenhang.
+- [[X]] Je größer die **Federkonstante** $D$, desto größer $E_\text{spann}$ — **linearer** Zusammenhang.
+- [[ ]] Die **Masse** $m$ beeinflusst $E_\text{spann}$ direkt.
+- [[ ]] Eine ausgelenkte Feder besitzt **nur dann** Spannenergie, wenn auch die Gravitation wirkt.
+- [[?]] Hinweis: Werfen Sie noch einmal einen Blick auf die Formel $E_\text{spann} = \tfrac{1}{2}\, D\, s^2$ — welche der vier Größen tauchen darin überhaupt auf?
 ***********************************************
 
 - **Auslenkung:** Je größer die Auslenkung $s$, desto **deutlich** größer $E_\text{spann}$ — quadratischer Zusammenhang.
@@ -202,7 +207,6 @@ Berechnen Sie die kinetische Energie $E_\text{kin}$ in Joule.
 ***********************************************
 
 $E_\text{kin} = \tfrac{1}{2} \cdot 4\,\text{kg} \cdot (27\,\text{m/s})^2 = 2 \cdot 729\,\text{J} = 1458\,\text{J}$
-
 ***********************************************
 
 ### Aufgabe 2 — Abhängigkeiten der Federspannenergie *(Mehrfachauswahl)*
@@ -214,7 +218,6 @@ Welche Größen beeinflussen $E_\text{spann}$ in einem **reibungsfreien, idealis
 - [[X]] Federkonstante $D$
 - [[ ]] Masse $m$
 - [[?]] Hinweis: Schauen Sie noch einmal auf die Formel $E_\text{spann} = \tfrac{1}{2}\, D\, s^2$ — welche Variablen tauchen darin tatsächlich auf?
-
 ***********************************************
 
 Im idealisierten Fall hängt $E_\text{spann}$ **nur** von $D$ und $s$ ab. Masse und Gravitation wirken nicht direkt; sie bestimmen lediglich die *statische* Ruhelage der Feder im Schwerefeld — und damit, von welchem Punkt aus die Auslenkung $s$ gemessen wird.
@@ -231,7 +234,6 @@ Wie schnell ist er ungefähr?
 - [( )] etwa $123\,\text{m/s}$
 - [( )] etwa $246\,\text{m/s}$
 - [[?]] Hinweis: Stellen Sie die Formel nach $v$ um — $v = \sqrt{2\, E_\text{kin} / m}$.
-
 ***********************************************
 
 $v = \sqrt{\dfrac{2 \cdot 116{,}400\,\text{J}}{943\,\text{kg}}} = \sqrt{246{,}87\,\text{m}^2/\text{s}^2} \approx 15{,}7\,\text{m/s}$
@@ -264,44 +266,9 @@ Sie haben in diesem Modul ein **kompaktes, didaktisch aufbereitetes Kapitel** zu
 | **Veröffentlichung**    | Innerhalb OPAL                                                              | OPAL, GitHub, Dropbox, USB-Stick, QR-Code …                                     |
 | **Externe Medien**      | edupool, SODIX usw. nur mit Schul-Login                                     | gleiche Quellen *plus* freie Medien aus Wikimedia/PhET/YouTube nebeneinander    |
 
-> [!NOTE]
-> **Sächsische Mediathek-Inhalte (edupool, SODIX) bleiben Login-pflichtig** — daran ändert LiaScript nichts. Im Klassenraum ist das kein Problem; in einer öffentlichen OER nicht teilbar. LiaScript lässt sich aber problemlos mit *beiden* Welten kombinieren: geschützte Inhalte für die Klasse, freie Inhalte für die Welt.
-
 > [!TIP]
 > **Genau diese Transformation** — vom OPAL-Rohstoff zur LiaScript-OER — üben Sie in den folgenden Phasen des Workshops:
 >
 > - **Phase 2 (Verstehen):** Welche Konzepte machen LiaScript so anpassungsfähig?
 > - **Phase 3 (Anwenden):** Sie bekommen `Energie.md` als Rohling und bauen daraus selbst — zunächst per Hand, dann mit KI-Unterstützung — einen LiaScript-Kurs.
 > - **Phase 4 (Verbreiten):** Wie kommt Ihr fertiger Kurs zurück nach OPAL Schule — und in die Hände Ihrer Lehrkräfte?
-
-## 5. Zum Abschluss — alle Energiearten in einem System
-
-> [!TIP]
-> **Energieerhaltungssatz (EES):** In einem idealisierten abgeschlossenen System bleibt die Gesamtenergie erhalten. Energieformen wandeln sich nur ineinander um:
-> $E_\text{kin} + E_\text{pot} + E_\text{spann} + \dots = \text{konstant}$
-
-> [!NOTE]
-> **Als Schluss-Highlight** noch eine zweite eingebettete PhET-Simulation — die Skaterin auf der Halfpipe. Sie führt die drei Energiearten aus Miniatur 1 in *einem* System zusammen und zeigt visuell, wie sie sich ineinander umwandeln. **Kein Pflichtprogramm mehr — schauen Sie sich an, was Sie reizt.**
-
-<!-- style="height: 700px;" -->
-??[PhET-Simulation: Energie-Skatepark](https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_de.html "Energie im Skaterpark")
-
-> **Zum Ausprobieren:**
->
-> 1. Öffnen Sie über das **grüne Plus** oben links die Energie-Übersicht.
-> 2. Ziehen Sie die Skaterin auf die Halfpipe und lassen Sie sie los.
-> 3. Beobachten Sie die Balken für **kinetische** und **potentielle** Energie — wann ist welcher maximal? Was passiert mit der **Gesamtenergie**?
-
-> [!NOTE]
-> Die volle Aufgabenfolge aus dem OPAL-Original — mit Gravitations- und Massen-Variation und numerischer Überprüfung des EES — bauen Sie in **Phase 3 (Anwenden)** selbst nach.
-
-## Und jetzt: Notizen ins Pad
-
-Zum Ende dieses Moduls — Ihre vier Notizen aus der Einstiegsaufgabe kommen jetzt zum Einsatz:
-
-> - Was hat Sie überrascht?
-> - Welches Element würden Sie in einer Schul-Fortbildung zeigen?
-> - Was möchten Sie im Tutorial-Teil unbedingt lernen?
-> - Was hat vielleicht anders funktioniert als erwartet?
-
-Sammeln Sie Ihre Antworten im **gemeinsamen Pad** — wir greifen sie in Phase 2 auf.

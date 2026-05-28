@@ -83,7 +83,7 @@ Experimentieren Sie auch mit nummerierten Listen (1. 2. 3.).
 
 
 <!---
-------------------------------------------------------------
+---------------------^---------------------------------------
 AUFGABE 5 — Tabelle der Energiearten
 Cheatsheet-Abschnitt: Tabellen
 
@@ -98,7 +98,9 @@ Tipp: Die Pipe `|` trennt Spalten. Die zweite Zeile mit
 
 Die drei Energiearten im Überblick
 
-| Ener
+| Energieart              | Formel                                  | Anwendung im Alltag                                |
+| ----------------------- | --------------------------------------- | -------------------------------------------------- |
+| **Kinetische Energie**  | $E_\text{kin} = \tfrac{1}{2}\, m\, v^2$ | fahrendes Auto, fliegender Ball, rotierende Welle |
 
 
 <!---
@@ -110,18 +112,14 @@ Fügen Sie die folgenden Formeln als LaTeX ein, eingerahmt von
 einfachen Dollarzeichen $...$ (Inline) bzw. doppelten $$...$$
 (als Block, mittig gesetzt).
 
-Beispiele:
-  Kinetische Energie:  $E_\text{kin} = \tfrac{1}{2}\, m\, v^2$
-  Potentielle Energie: $E_\text{pot} = m\, g\, h$
-
-Ersetzen Sie weiter unten die Unicode-Schnipsel durch saubere
+Ersetzen Sie weiter unten den Unicode-Schnipsel durch saubere
 LaTeX-Formeln.
 ------------------------------------------------------------
 --->
 
-Kinetische Energie:  𝐸𝑘𝑖𝑛=12⋅𝑚⋅𝑣2
+Kinetische Energie:  $E_\text{kin} = \tfrac{1}{2}\, m\, v^2$
 
-Potentielle Energie:  𝐸𝑃𝑜𝑡=𝑚⋅𝑔⋅ℎ
+Potentielle Energie:  𝐸p𝑜𝑡=𝑚⋅𝑔⋅ℎ
 
 
 <!---
@@ -184,18 +182,21 @@ betten Sie es hier ein. Achten Sie auf die Lizenz.
 <!---
 ------------------------------------------------------------
 AUFGABE 10 — PhET-Simulation einbetten
-Cheatsheet-Abschnitt: iframe-Einbettung
+Cheatsheet-Abschnitt: Eingebettete Ressource
 
 Betten Sie die PhET-Simulation zum Energie-Skatepark direkt
-in die Seite ein. Das funktioniert mit einem HTML-iframe:
+in die Seite ein. LiaScript hat dafür eine eigene Syntax —
+**kein iframe** nötig:
 
-  <iframe src="URL" width="100%" height="500"></iframe>
+  ??[Kurztitel](URL "Titel mit Untertitel")
+
+Das doppelte Fragezeichen ?? sagt LiaScript: "diese Ressource
+einbetten" (statt nur zu verlinken). Format wird automatisch
+erkannt — PhET, GeoGebra, PDF, oEmbed …
 
 Die deutsche Variante finden Sie unter:
   https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_de.html
 
-Tipp: Probieren Sie verschiedene Höhen (height="400"/"600"/"700"),
-bis das Verhältnis von Sim und Aufgabentext passt.
 ------------------------------------------------------------
 --->
 

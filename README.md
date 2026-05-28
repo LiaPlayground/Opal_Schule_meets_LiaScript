@@ -35,7 +35,8 @@ Kurzvortrag zum *Warum*: Welches Problem löst LiaScript für Lehrkräfte? Was s
 
 **Hands-on.** Sie bekommen das Rohmaterial [`Energie.md`](original_material/Energie.md) als Skelett mit 15 progressiven Aufgaben und bauen daraus Schritt für Schritt selbst einen LiaScript-Kurs — von Formeln über Quizze bis zur eingebetteten Simulation.
 
-- 📝 **Arbeitsvorlage:** [Phase 3 im Player öffnen](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Vorlage.md)
+- ✏️ **Arbeitsvorlage im LiveEditor:** [Phase 3 zum Bearbeiten öffnen](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Vorlage.md) *(Quelltext + Rendering nebeneinander — sofort losschreiben, kein lokales Setup)*
+- 👁 **Nur ansehen:** [Vorlage im Player](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Vorlage.md)
 - ✅ **Musterlösung:** [03_Anwenden_Loesung.md im Player](https://liascript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Loesung.md) *(erst nach dem eigenen Versuch ansehen)*
 - 📄 **Cheatsheet zum Ausdrucken:** [cheatSheet/cheatsheet.pdf](cheatSheet/cheatsheet.pdf) — zweiseitige Syntax-Handreichung (Markdown + LiaScript). Jede Aufgabe verweist über `Cheatsheet-Abschnitt: …` auf die passende Karte.
 

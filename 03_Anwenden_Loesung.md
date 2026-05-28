@@ -191,19 +191,22 @@ Ein kurzer Überblick zum Begriff der Energie:
 <!---
 ------------------------------------------------------------
 AUFGABE 10 — PhET-Simulation einbetten  ✅ GELÖST
-Cheatsheet-Abschnitt: iframe-Einbettung
+Cheatsheet-Abschnitt: Eingebettete Ressource
 
-Die PhET-Simulation wird als iframe eingebettet — mit einer
-Höhe von 500 Pixeln, einem dezenten Rahmen und der deutschen
-Sprachvariante (_de.html). Direkt unter dem iframe steht die
+Die PhET-Simulation wird über die LiaScript-eigene Syntax
+??[Kurztitel](URL "Titel") eingebettet — kein iframe nötig.
+LiaScript erkennt das Format automatisch und bindet die Sim
+direkt in die Seite ein. Direkt darunter steht die
 Aufgabenstellung, damit Lernende beim Experimentieren nicht
 zwischen Sim und Aufgabentext hin- und herscrollen müssen.
+
 ------------------------------------------------------------
 --->
 
 ## Experimentieren mit dem Energie-Skatepark
 
-??[phet Simulation](https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_de.html "Energie im Skaterpark")
+<!-- style="height: 600px;" -->
+??[PhET-Simulation: Energie-Skatepark](https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_de.html "Energie im Skaterpark")
 
 > **Aufgabenstellung:**
 >

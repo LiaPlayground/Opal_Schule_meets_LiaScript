@@ -145,11 +145,11 @@ $E_\text{kin} = \tfrac{1}{2}\, m\, v^2$
 
 __Tabellen__ — wie in Markdown gewohnt:
 
-| Energieart   | Formel                          |
+| Energieart   | Beispiel aus dem Alltag         |
 | ------------ |:--------------------------------|
-| kinetisch    | $\tfrac{1}{2}\, m\, v^2$        |
-| potentiell   | $m\, g\, h$                     |
-| Spannenergie | $\tfrac{1}{2}\, D\, s^2$        |
+| kinetisch    | fahrendes Auto                  |
+| potentiell   | Werkzeug am Kran                |
+| Spannenergie | gespannter Bogen                |
 ```
 
 > [!NOTE]
@@ -170,50 +170,22 @@ Ein Ball mit Masse $m = 4$ kg und Geschwindigkeit $v = 27$ m/s.
 Wie groß ist $E_\text{kin}$ in Joule?
 
 [[1458]]
-
-- [[?]] Hinweis: $E_\text{kin} = \tfrac{1}{2}\, m\, v^2$ — auf das Quadrat achten!
+[[?]] Hinweis: $E_\text{kin} = \tfrac{1}{2}\, m\, v^2$ — auf das Quadrat achten!
 
 __Animationsstufen__ — wie bei einer Tafel-Erklärung:
 
-{{1}} Erst kommt die Formel:  $E = \tfrac{1}{2}\, m\, v^2$,
-{{2}} dann ein Zahlenbeispiel: $m = 4, v = 27 \Rightarrow E = 1458$ J,
-{{3}} schließlich die Pointe:  Doppeltes $v$ → vierfaches $E$.
+{{1}} 
+Erst kommt die Formel:  $E = \tfrac{1}{2}\, m\, v^2$,
+
+{{2}} 
+dann ein Zahlenbeispiel: $m = 4, v = 27 \Rightarrow E = 1458$ J,
+
+{{3}} 
+schließlich die Pointe:  Doppeltes $v$ → vierfaches $E$.
 ```
 
 > [!NOTE]
 > **Vergleich zum LMS-Ansatz:** Ein ONYX-Quiz lebt *in* OPAL. Verlassen Sie OPAL, ist die Aufgabe weg. Ein LiaScript-Quiz lebt im Markdown-Text — und reist überall mit. Auf dem Smartboard, im Tablet der Schülerin, im Mail-Anhang an die Vertretungslehrkraft.
-
-### Eine Stimme aus der Schule
-
-> [!IMPORTANT]
-> **Kurze Pause — eine Praxis-Stimme zu Konzept 2.**
-
-> *„Die Schülerinnen und Schüler fragen nicht mehr 'Ist das richtig?' — sie bekommen die Rückmeldung sofort. Das gibt ihnen Selbstvertrauen, und ich kann mich auf Hilfestellungen konzentrieren, statt bestätigend von Tisch zu Tisch zu wandern."*
->
-> — **Martin Lommatzsch**, Geschwister-Scholl-Gymnasium Freiberg, Mathematik
-
-           {{0-1}}
-**************************************
-
-Was Herr Lommatzsch hier beschreibt, ist mehr als ein Bequemlichkeitsargument:
-
-+ **Lernende gewinnen Autonomie** — der direkte Feedback-Kanal ist nicht mehr die Lehrkraft.
-+ **Die Lehrkraft wird frei für die schwierigen Fälle** — die, die sonst untergehen.
-+ **Differenzierung wird leichter** — wer schnell ist, geht weiter; wer hängt, bekommt mehr Hilfen.
-+ **DaZ-Lernende profitieren** — Vorlesefunktion und Übersetzung sind eingebaut.
-
-**************************************
-
-           {{1}}
-**************************************
-
-> *„Keine rechtlichen Bedenken für die Nutzung — und die Materialien sind von überall zugänglich, beliebig oft wiederholbar."*
->
-> — Lommatzsch, dito
-
-Eine vollständige Materialsammlung in LiaScript — von einer Lehrkraft, im Alltag entstanden — findet sich unter [mint-the-gap.github.io/Aufgabensammlung](https://mint-the-gap.github.io/Aufgabensammlung/).
-
-**************************************
 
 ### Konzept 3 — Der Browser ist die Laufzeitumgebung
 
@@ -275,6 +247,11 @@ Konkret: Ein LiaScript-Kurs lässt sich **als SCORM- oder xAPI-Paket exportieren
 > [!NOTE]
 > **Wie konkret kommt der Kurs nach OPAL Schule?** Genau das schauen wir uns in **[Phase 4 (Verbreiten)](04_Verbreiten.md)** an — gemeinsam mit den Themen KI-Generator und produktive Werkzeugkette (VS Code, GitHub).
 
+## Eine Stimme aus der Schule
+
+> [!TIP]
+> Eine vollständige Materialsammlung in LiaScript — von einer Lehrkraft, im Alltag entstanden — findet sich unter [mint-the-gap.github.io/Aufgabensammlung](https://mint-the-gap.github.io/Aufgabensammlung/). - **Martin Lommatzsch**, Geschwister-Scholl-Gymnasium Freiberg, Mathematik
+
 ## Zusammengefasst
 
 > [!TIP]
@@ -286,5 +263,14 @@ Konkret: Ein LiaScript-Kurs lässt sich **als SCORM- oder xAPI-Paket exportieren
 > **Die OER-Pointe:** Wer den Quelltext hat, kann alle fünf V-Freiheiten umsetzen — *verwahren, verwenden, verarbeiten, vermischen, verbreiten*. Das gilt mit LiaScript für *interaktive* Materialien genauso wie für reinen Text.
 
 Sie haben jetzt das *Warum*. In der nächsten Phase bauen Sie diesen Quelltext selbst — Schritt für Schritt — aus dem Energie-Stoff, den Sie in Phase 1 erlebt haben.
+
+> [!IMPORTANT]
+> **Material für die praktische Phase**
+>
+> Öffnen Sie die Arbeitsvorlage direkt im **LiveEditor** — Quelltext links, gerendertes Ergebnis rechts, kein lokales Setup:
+>
+> 👉 [**Phase 3 im LiveEditor öffnen**](https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/Opal_Schule_meets_LiaScript/main/03_Anwenden_Vorlage.md)
+>
+> Halten Sie zusätzlich das zweiseitige [**Cheatsheet**](https://github.com/LiaPlayground/Opal_Schule_meets_LiaScript/blob/main/cheatSheet/cheatsheet.pdf) griffbereit — jede Aufgabe verweist über `Cheatsheet-Abschnitt: …` auf die passende Karte.
 
 > **Auf zu [Phase 3 — Anwenden](03_Anwenden_Vorlage.md).**
