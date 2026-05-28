@@ -3,7 +3,15 @@
 # OPAL Schule meets LiaScript
 
 > Online-Workshop für die Referent:innen der **Medienpädagogischen Zentren in Sachsen**
-> **28. Mai 2026, 13:00–15:00 Uhr** · Prof. Dr. Sebastian Zug, Dr. André Dietrich (TU Bergakademie Freiberg)
+> **28. Mai 2026, 13:00–15:00 Uhr** 
+
+> Prof. Dr. Sebastian Zug, Dr. André Dietrich (TU Bergakademie Freiberg)
+>
+> Lisette Hoffmann (BPS Bildungsportal Sachsen GmbH)
+>
+> Susann Lenk (Landesamt für Schule und Bildung)
+
+<h2> Herzlich willkommen zum Workshop! </h2>
 
 ## Worum geht es?
 
